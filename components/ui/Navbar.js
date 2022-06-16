@@ -6,6 +6,7 @@ export const Navbar = () => {
 
     const user = useContext(UserContext);
     console.log(user);
+  
 
   return (
     <AppBar position='sticky'>

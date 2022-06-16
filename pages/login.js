@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 
 const Login = () => {
@@ -7,8 +8,10 @@ const Login = () => {
         password: "",
     });
 
+    const router = useRouter();
+
     const loginSubmit = () => {
-        console.log('hey')
+        router.push('/');
     }
 
 

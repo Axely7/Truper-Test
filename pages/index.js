@@ -3,13 +3,22 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Layout } from '../components/layouts';
 import { aireApi } from '../api';
+import { Grid } from '@mui/material';
+import { AireCard } from '../components/aire';
 
 
 export default function Home({ data }) {
   console.log(data.results);
+
   return (
     <Layout>
-      <div>Hola</div>
+      <Grid>
+        {
+          data.results.map( ( dato ) => (
+            <AireCard aire={ dato }/>
+          ))
+        }
+      </Grid>
     </Layout>
   )
 }
